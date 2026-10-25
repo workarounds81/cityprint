@@ -1,101 +1,490 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-SG">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CityPrint — Fast, Local Printing</title>
-  <meta name="description" content="CityPrint: business cards, flyers, banners, signage and custom printing with fast local turnaround.">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>City Print &amp; Signs Singapore | Signboards, Lightboxes &amp; Printing 招牌 · 灯箱 · 印刷</title>
+<meta name="description" content="City Print & Signs Pte Ltd — your complete signage specialist in Singapore. Shopfront signboards, LED lightboxes, menu boards, large format printing, design, fabrication and islandwide installation. 新加坡招牌、灯箱、菜单板及大型印刷。">
+<meta name="theme-color" content="#2e1065">
+<link rel="canonical" href="https://cityprint.sg/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="City Print & Signs — Ideas in Print. Brands on Display.">
+<meta property="og:description" content="Signboards, lightboxes, menu boards & large format printing in Singapore. WhatsApp 8930 2515.">
+<meta property="og:image" content="https://cityprint.sg/assets/img/og-banner.jpg">
+<meta property="og:url" content="https://cityprint.sg/">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/img/work/chamomiles-960.webp" imagesrcset="assets/img/work/chamomiles-480.webp 480w, assets/img/work/chamomiles-960.webp 960w" imagesizes="(max-width: 860px) 92vw, 46vw" fetchpriority="high">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"City Print & Signs Pte Ltd","alternateName":"City Print","description":"Your complete signage specialist: signboards, lightboxes, large format printing, design, fabrication and installation.","url":"https://cityprint.sg/","telephone":"+65 8930 2515","image":"https://cityprint.sg/assets/img/og-banner.jpg","areaServed":{"@type":"Country","name":"Singapore"},"address":{"@type":"PostalAddress","addressCountry":"SG"}}
+</script>
+<style>
+:root{
+  --p950:#1a0638;--p900:#2e1065;--p800:#3b0f80;--p700:#5b21b6;--p600:#6d28d9;--p500:#8b5cf6;--p200:#ddd6fe;--p100:#ede9fe;--p50:#f5f3ff;
+  --gold:#facc15;--ink:#140a26;--muted:#5d5670;--bg:#f2f0f6;--card:#fff;--line:#e5e1ee;
+  --rainbow:linear-gradient(90deg,#f9d423,#3ddc97,#22b8f0,#8b5cf6,#e040a0,#f59e0b);
+  --r:28px;--wa:#25d366;
+  --font:"Inter","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+}
+*{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:clip;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3{line-height:1.1;letter-spacing:-.02em;margin:0}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+.zh{display:block;font-weight:500;color:var(--muted);letter-spacing:0}
+.grad{background:linear-gradient(90deg,var(--p700),#c026d3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;border:0;background:var(--p900);color:#fff;font-weight:600;text-decoration:none;cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:var(--p700)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--p900);box-shadow:inset 0 0 0 1.5px var(--p900)}
+.btn.ghost:hover{background:var(--p900);color:#fff}
+.btn.wa{background:var(--wa);color:#05361a}
+.btn svg{width:18px;height:18px;flex:none}
+.pill{display:inline-block;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:.82rem;color:var(--muted);text-decoration:none}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:30;background:rgba(242,240,246,.88);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:52px;height:auto}
+.brand b{display:block;font-size:1.02rem;letter-spacing:.02em;line-height:1.1}
+.brand small{display:block;font-size:.62rem;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+.links{display:flex;gap:28px;align-items:center;font-size:.94rem}
+.links a{text-decoration:none}
+.links a:not(.btn):hover{color:var(--p700)}
+.links .btn{padding:10px 18px}
+.menu-btn{display:none;width:44px;height:44px;border:0;border-radius:12px;background:#fff;cursor:pointer}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:18px;height:2px;margin:auto;background:var(--ink);position:relative;transition:transform .2s}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:end;padding:36px 0 56px}
+.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);font-weight:800;margin-bottom:10px}
+.hero h1 .zh{font-size:.42em;margin-top:14px;letter-spacing:.12em;color:var(--p700)}
+.tag{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.tag::before{content:"";width:34px;height:3px;border-radius:3px;background:var(--rainbow)}
+.lead{font-size:1.08rem;color:var(--muted);max-width:46ch;margin:18px 0 0}
+.lead .zh{margin-top:6px;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.facts{display:inline-flex;gap:0;margin-top:34px;background:#fff;border-radius:22px;padding:16px 8px;box-shadow:0 1px 0 var(--line)}
+.facts div{padding:0 20px}
+.facts div+div{border-left:1px solid var(--line)}
+.facts b{display:block;font-size:1.25rem}
+.facts span{font-size:.78rem;color:var(--muted)}
+.hero-img{position:relative}
+.hero-img img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:260px 260px var(--r) var(--r);box-shadow:0 30px 60px -30px rgba(46,16,101,.55)}
+.hero-img .badge{position:absolute;left:-18px;bottom:28px;background:var(--p900);color:#fff;padding:14px 18px;border-radius:18px;font-size:.85rem;max-width:230px;box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+.hero-img .badge b{display:block;font-size:.95rem}
+
+/* sections */
+.sec{padding:72px 0}
+.panel{background:#e9e5f1;border-radius:calc(var(--r) + 8px);padding:48px clamp(18px,4vw,48px)}
+.head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:32px;flex-wrap:wrap}
+.head h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:700}
+.head h2 .zh{font-size:.5em;margin-top:8px;letter-spacing:.1em}
+.head p{max-width:42ch;color:var(--muted);margin:0}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.s{background:var(--card);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:10px;min-height:230px}
+.s .ic{width:46px;height:46px;border-radius:14px;background:var(--p50);display:grid;place-items:center;color:var(--p700)}
+.s .ic svg{width:24px;height:24px}
+.s h3{font-size:1.2rem;margin-top:8px}
+.s h3 .zh{font-size:.82em;margin-top:4px;color:var(--p700)}
+.s p{margin:0;color:var(--muted);font-size:.93rem}
+.s.feat{grid-row:span 2;position:relative;overflow:hidden;color:#fff;padding:0;justify-content:flex-end;min-height:480px;background:var(--p950)}
+.s.feat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75}
+.s.feat .in{position:relative;padding:28px;background:linear-gradient(transparent,rgba(26,6,56,.95) 45%)}
+.s.feat h3 .zh,.s.feat p{color:#e9e2ff}
+.s.feat .pill{position:absolute;top:20px;right:20px;background:#fff;color:var(--ink);border:0;font-weight:600}
+
+/* marquee */
+.mq{overflow:hidden;padding:30px 0;white-space:nowrap;user-select:none}
+.mq div{display:inline-block;font-size:clamp(2.2rem,6vw,4.4rem);font-weight:600;letter-spacing:-.02em;animation:mq 38s linear infinite;will-change:transform}
+.mq div+div{display:block;animation-direction:reverse;margin-top:4px}
+.mq i{font-style:normal;color:var(--p500);margin:0 .35em}
+.mq em{font-style:normal}
+.mq em.g{background:linear-gradient(90deg,var(--p500),#c026d3);-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* featured carousel */
+.car{display:grid;grid-auto-flow:column;grid-auto-columns:min(78%,560px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:none;overscroll-behavior-x:contain}
+.car::-webkit-scrollbar{display:none}
+.slide{scroll-snap-align:start;position:relative;border-radius:var(--r);overflow:hidden;background:var(--p950);aspect-ratio:4/5;color:#fff}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide .in{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(255,255,255,.94);color:var(--ink);border-radius:20px;padding:16px 18px}
+.slide .in b{display:block;font-size:1.1rem}
+.slide .in small{color:var(--muted)}
+.slide .in p{margin:6px 0 0;font-size:.88rem;color:var(--muted)}
+.arrows{display:flex;gap:8px}
+.arrows button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:1.2rem}
+.arrows button:hover{background:var(--p900);color:#fff}
+
+/* gallery */
+.filters{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:22px;padding-bottom:4px}
+.filters::-webkit-scrollbar{display:none}
+.filters button{flex:none;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.9rem;white-space:nowrap}
+.filters button[aria-pressed=true]{background:var(--p900);border-color:var(--p900);color:#fff}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.w{margin:0;background:#fff;border-radius:20px;overflow:hidden;content-visibility:auto;contain-intrinsic-size:auto 380px}
+.w[hidden]{display:none}
+.w button{display:block;width:100%;padding:0;border:0;background:#ddd;cursor:zoom-in}
+.w img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .4s}
+.w button:hover img{transform:scale(1.04)}
+.w figcaption{padding:12px 14px 14px;font-size:.85rem}
+.w b{display:block;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.w span{color:var(--muted);font-size:.78rem}
+.more{display:flex;justify-content:center;margin-top:26px}
+dialog{border:0;padding:0;background:transparent;max-width:min(96vw,900px);max-height:92vh}
+dialog::backdrop{background:rgba(20,6,40,.85)}
+dialog img{max-height:86vh;width:auto;margin:auto;border-radius:16px}
+dialog p{color:#fff;text-align:center;margin:10px 0 0;font-size:.9rem}
+dialog button{position:fixed;top:14px;right:14px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;font-size:1.4rem;cursor:pointer}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why div{background:#fff;border-radius:var(--r);padding:26px}
+.why svg{width:34px;height:34px;color:var(--p700)}
+.why b{display:block;margin-top:14px;font-size:1.05rem}
+.why span{color:var(--muted);font-size:.9rem}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:n;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:n;padding:24px;border-radius:var(--r);background:#fff;position:relative}
+.steps li::before{content:"0" counter(n);font-size:2.4rem;font-weight:800;display:block;margin-bottom:8px;background:var(--rainbow);-webkit-background-clip:text;background-clip:text;color:transparent}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:.9rem}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+.faq h2{font-size:clamp(2rem,4.2vw,3rem)}
+.faq h2 .zh{font-size:.5em;margin-top:8px;letter-spacing:.1em}
+.faq p.note{color:var(--muted)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--p700);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+summary small{display:block;font-weight:500;color:var(--muted);margin-top:2px}
+details p{margin:10px 0 0;color:var(--muted);font-size:.95rem}
+
+/* enquiry */
+.cta{background:radial-gradient(120% 120% at 0% 0%,var(--p700) 0%,var(--p900) 45%,var(--p950) 100%);color:#fff;border-radius:calc(var(--r) + 8px);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:40px;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:auto -10% -2px -10%;height:4px;background:var(--rainbow)}
+.cta h2{font-size:clamp(2rem,4.4vw,3.2rem)}
+.cta h2 .zh{color:var(--gold);font-size:.5em;margin-top:10px;letter-spacing:.1em}
+.cta p{color:#d9cffc}
+.cta .direct{margin-top:26px;display:grid;gap:10px}
+.cta .direct a{color:#fff;font-weight:600;text-decoration:none;font-size:1.3rem}
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+label{display:grid;gap:6px;font-size:.82rem;color:#d9cffc}
+label.full{grid-column:1/-1}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 14px;outline:none}
+select option{color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);background:rgba(255,255,255,.12)}
+input::placeholder,textarea::placeholder{color:#a99bd6}
+form .btn{grid-column:1/-1;justify-content:center;padding:15px}
+.fine{grid-column:1/-1;font-size:.78rem;color:#a99bd6;margin:0}
+
+footer{padding:36px 0 110px;color:var(--muted);font-size:.86rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer a{text-decoration:none}
+
+/* floating whatsapp */
+.fab{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:40;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;border-radius:999px;padding:12px;box-shadow:0 10px 30px -8px rgba(0,0,0,.45);font-weight:700}
+.fab svg{width:32px;height:32px}
+.fab span{padding-right:8px;font-size:.92rem}
+.fab::before{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:ping 2.4s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* responsive */
+@media (max-width:1000px){
+  .svc{grid-template-columns:1fr 1fr}
+  .s.feat{grid-column:1/-1;grid-row:auto;min-height:380px}
+  .gal{grid-template-columns:repeat(3,1fr)}
+  .why,.steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .links{position:fixed;inset:68px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;background:#fff;padding:8px 16px 20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3);transform:translateY(-130%);transition:transform .25s;z-index:-1}
+  .links.open{transform:none}
+  .links a{padding:14px 4px;border-bottom:1px solid var(--line)}
+  .links .btn{margin-top:14px;justify-content:center;border:0}
+  .menu-btn{display:block}
+  .hero{grid-template-columns:1fr;padding-top:16px;gap:28px}
+  .hero-img img{border-radius:180px 180px var(--r) var(--r);aspect-ratio:5/5}
+  .hero-img .badge{left:12px}
+  .faq,.cta{grid-template-columns:1fr}
+  .sec{padding:52px 0}
+  .panel{padding:32px 16px}
+}
+@media (max-width:560px){
+  .svc{grid-template-columns:1fr}
+  .s{min-height:0}
+  .gal{grid-template-columns:1fr 1fr;gap:10px}
+  .w figcaption{padding:10px}
+  .facts div{padding:0 14px}
+  form{grid-template-columns:1fr}
+  .fab span{display:none}
+  .why,.steps{grid-template-columns:1fr}
+  .brand small{display:none}
+  .slide .in p{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#top"><img src="assets/favicon.svg" alt="" width="28" height="28"> CityPrint</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">☰</button>
-      <nav id="nav-links" class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#how">How it works</a>
-        <a href="#contact" class="btn btn-small">Get a quote</a>
-      </nav>
+<header class="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="City Print & Signs home">
+      <img src="assets/img/logo-mark.webp" alt="" width="160" height="97">
+      <span><b>CITY PRINT</b><small>&amp; Signs Pte Ltd</small></span>
+    </a>
+    <nav class="links" id="links">
+      <a href="#services">Services 服务</a>
+      <a href="#projects">Projects 作品</a>
+      <a href="#faq">FAQ 常见问题</a>
+      <a href="#enquire" class="btn">Get a Quote 免费报价</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="links"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero">
+    <div>
+      <div class="tag">Your complete signage specialist</div>
+      <h1>Ideas in <span class="grad">Print.</span><br>Brands on <span class="grad">Display.</span><span class="zh" lang="zh-Hans">创意印刷 · 品牌闪耀</span></h1>
+      <p class="lead">Shopfront signboards, LED lightboxes, menu boards and large-format printing — designed, fabricated and installed islandwide in Singapore.<span class="zh" lang="zh-Hans">店面招牌、LED灯箱、菜单板及大型印刷——从设计、制作到安装，全岛一站式服务。</span></p>
+      <div class="cta-row">
+        <a class="btn wa" href="https://wa.me/6589302515?text=Hi%20City%20Print%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.2 10 10 5.3 16 5.3S26.8 10 26.8 15.8 22 26.4 16 26.4zm5.9-7.8c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.2 1.3 3.4c.2.2 2.3 3.5 5.6 4.9 2.8 1.1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg> WhatsApp 8930 2515</a>
+        <a class="btn ghost" href="#projects">See our work 查看作品</a>
+      </div>
+      <div class="facts">
+        <div><b>Islandwide</b><span>Installation 全岛安装</span></div>
+        <div><b>One-stop</b><span>Design → Install 一站式</span></div>
+      </div>
     </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="container">
-        <h1>Print that makes your business look sharp.</h1>
-        <p class="lead">Business cards, flyers, banners and signage — printed locally, ready fast.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn">Request a quote</a>
-          <a href="#services" class="btn btn-ghost">See services</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <div class="container">
-        <h2>Services</h2>
-        <div class="grid">
-          <article class="card"><h3>Business cards</h3><p>Matte, gloss or premium textured stock. Same-day options available.</p></article>
-          <article class="card"><h3>Flyers &amp; brochures</h3><p>Full-colour, single or double-sided, folded to your spec.</p></article>
-          <article class="card"><h3>Banners &amp; signage</h3><p>Vinyl banners, roll-ups, posters and window graphics.</p></article>
-          <article class="card"><h3>Stickers &amp; labels</h3><p>Custom shapes and sizes for packaging and promotion.</p></article>
-          <article class="card"><h3>Large format</h3><p>Posters, plans and display prints up to A0 and beyond.</p></article>
-          <article class="card"><h3>Design help</h3><p>No artwork? Our team can design or fix files for print.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="how" class="section alt">
-      <div class="container">
-        <h2>How it works</h2>
-        <ol class="steps">
-          <li><strong>Send your file</strong><span>Upload artwork or tell us what you need.</span></li>
-          <li><strong>Approve a proof</strong><span>We check your file and send a proof and price.</span></li>
-          <li><strong>Collect or deliver</strong><span>Pick up in store or get it delivered.</span></li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container contact">
-        <div>
-          <h2>Get a quote</h2>
-          <p>Tell us about your job and we'll reply within one business day.</p>
-          <!-- TODO: replace with real business details -->
-          <ul class="contact-list">
-            <li><strong>Email:</strong> <a href="mailto:hello@example.com">hello@example.com</a></li>
-            <li><strong>Phone:</strong> <a href="tel:+10000000000">+1 (000) 000-0000</a></li>
-            <li><strong>Address:</strong> 123 Main Street, Your City</li>
-            <li><strong>Hours:</strong> Mon–Fri 9:00–18:00, Sat 10:00–14:00</li>
-          </ul>
-        </div>
-        <!-- Static sites can't process forms on their own. Point "action" at a form service
-             (e.g. Formspree) or swap for your host's form handling. Until then it opens an email. -->
-        <form class="quote-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
-          <label>Name<input name="name" required autocomplete="name"></label>
-          <label>Email<input name="email" type="email" required autocomplete="email"></label>
-          <label>What do you need printed?
-            <select name="product">
-              <option>Business cards</option><option>Flyers / brochures</option>
-              <option>Banners / signage</option><option>Stickers / labels</option>
-              <option>Large format</option><option>Something else</option>
-            </select>
-          </label>
-          <label>Details (quantity, size, deadline)<textarea name="details" rows="4"></textarea></label>
-          <button class="btn" type="submit">Send request</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> CityPrint. All rights reserved.</p>
+    <div class="hero-img">
+      <img src="assets/img/work/chamomiles-960.webp" srcset="assets/img/work/chamomiles-480.webp 480w, assets/img/work/chamomiles-960.webp 960w" sizes="(max-width: 860px) 92vw, 46vw" alt="Illuminated 3D shopfront sign for Chamomile's Creamery by City Print" width="960" height="1280" fetchpriority="high">
+      <div class="badge"><b>F&amp;B · Retail · Offices</b>Trusted by businesses across Singapore</div>
     </div>
-  </footer>
+  </section>
 
-  <script src="assets/main.js"></script>
+  <section class="wrap" id="services">
+    <div class="panel">
+      <div class="head">
+        <h2>Our Services<span class="zh" lang="zh-Hans">我们的服务</span></h2>
+        <p>From a single menu board to a full shopfront — we handle design, printing, fabrication and installation.</p>
+      </div>
+      <div class="svc">
+        <article class="s feat">
+          <img src="assets/img/work/old-airport-wanton-960.webp" alt="Signboard and menu lightboxes at Old Airport Rd Wanton Noodle" width="960" height="720" loading="lazy" decoding="async">
+          <a class="pill" href="#projects">See projects ↗</a>
+          <div class="in">
+            <h3>Signboards<span class="zh" lang="zh-Hans">店面招牌</span></h3>
+            <p>Shopfront signs, indoor &amp; outdoor. 3D letters, LED channel letters, acrylic and metal finishes.</p>
+          </div>
+        </article>
+        <article class="s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 8h10M7 12h6M9 20h6M12 16v4"/></svg></div><h3>Lightboxes &amp; Menu Boards<span class="zh" lang="zh-Hans">灯箱 · 菜单板</span></h3><p>LED lightboxes, menu boards, pillar and hanging lightboxes, illuminated signs.</p></article>
+        <article class="s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg></div><h3>Large Format Printing<span class="zh" lang="zh-Hans">大型印刷</span></h3><p>Banners, posters, stickers, backdrops, wall graphics and frosted glass film.</p></article>
+        <article class="s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg></div><h3>Design &amp; Fabrication<span class="zh" lang="zh-Hans">设计与制作</span></h3><p>Custom solutions from concept to installation. No artwork? We'll design it for you.</p></article>
+        <article class="s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div><h3>Installation &amp; Maintenance<span class="zh" lang="zh-Hans">安装与维修</span></h3><p>Experienced installers and reliable after-sales service, islandwide.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <div class="mq" aria-hidden="true">
+    <div><em>Signboards</em><i>+</i><em class="g">Lightboxes</em><i>+</i><em>Menu Boards</em><i>+</i><em class="g">3D Letters</em><i>+</i><em>Large Format</em><i>+</i><em class="g">Installation</em><i>+</i><em>Signboards</em><i>+</i><em class="g">Lightboxes</em><i>+</i><em>Menu Boards</em><i>+</i><em class="g">3D Letters</em><i>+</i><em>Large Format</em><i>+</i><em class="g">Installation</em><i>+</i></div>
+    <div lang="zh-Hans"><em class="g">招牌</em><i>+</i><em>灯箱</em><i>+</i><em class="g">菜单板</em><i>+</i><em>立体字</em><i>+</i><em class="g">横幅海报</em><i>+</i><em>墙贴</em><i>+</i><em class="g">展览</em><i>+</i><em>安装维修</em><i>+</i><em class="g">招牌</em><i>+</i><em>灯箱</em><i>+</i><em class="g">菜单板</em><i>+</i><em>立体字</em><i>+</i><em class="g">横幅海报</em><i>+</i><em>墙贴</em><i>+</i><em class="g">展览</em><i>+</i><em>安装维修</em><i>+</i></div>
+  </div>
+
+  <section class="wrap sec" style="padding-top:20px">
+    <div class="head">
+      <h2>Selected Works<span class="zh" lang="zh-Hans">精选作品</span></h2>
+      <div class="arrows"><button type="button" data-dir="-1" aria-label="Previous">←</button><button type="button" data-dir="1" aria-label="Next">→</button></div>
+    </div>
+    <div class="car" id="car">
+      <article class="slide"><img src="assets/img/work/kowloon-dimsum-960.webp" alt="Kowloon Hong Kong Dim Sum hanging lightbox" width="960" height="1280" loading="lazy" decoding="async"><div class="in"><b>Kowloon HK Dim Sum 九龙香港点心</b><small>Hanging lightbox · Shop signage</small><p>Double-sided vertical lightbox with bold calligraphy, lit for maximum visibility.</p></div></article>
+      <article class="slide"><img src="assets/img/work/youtiao-fish-soup-960.webp" alt="Youtiao Porridge and Fish Soup menu lightboxes" width="720" height="960" loading="lazy" decoding="async"><div class="in"><b>Youtiao Porridge · Fish Soup 油条粥品 · 鱼汤</b><small>Signboard · Menu lightboxes</small><p>Bright bilingual signboards and menu panels for a food court stall.</p></div></article>
+      <article class="slide"><img src="assets/img/work/expo-booth-1-960.webp" alt="Exhibition booth with printed graphics and lightbox walls" width="960" height="1280" loading="lazy" decoding="async"><div class="in"><b>Exhibition Booth 展位</b><small>Build · Graphics · Lighting</small><p>Full booth fabrication with printed panels, LED lighting and display cases.</p></div></article>
+      <article class="slide"><img src="assets/img/work/emerald-travels-960.webp" alt="Emerald Travels office wall graphics with 3D logo" width="960" height="1280" loading="lazy" decoding="async"><div class="in"><b>Emerald Travels</b><small>Office branding · Wall graphics</small><p>Full-wall printed graphics with a gold 3D logo for a travel agency counter.</p></div></article>
+      <article class="slide"><img src="assets/img/work/tian-tian-960.webp" alt="Tian Tian Jian Mian signboard and pillar lightbox" width="720" height="960" loading="lazy" decoding="async"><div class="in"><b>Tian Tian Jian Mian 天天见面</b><small>Signboard · Pillar lightbox</small><p>Coordinated signboard, menu and pillar lightbox for a noodle stall.</p></div></article>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="projects" style="padding-top:0">
+    <div class="panel">
+      <div class="head">
+        <h2>Our Projects<span class="zh" lang="zh-Hans">项目作品</span></h2>
+        <p>Real installations by our team across Singapore. Tap any photo to enlarge.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button type="button" data-f="all" aria-pressed="true">All 全部</button>
+        <button type="button" data-f="shop" aria-pressed="false">Shopfront Signs 店面招牌</button>
+        <button type="button" data-f="light" aria-pressed="false">Lightboxes &amp; Menus 灯箱菜单</button>
+        <button type="button" data-f="pillar" aria-pressed="false">Pillar &amp; Hanging 立柱悬挂</button>
+        <button type="button" data-f="office" aria-pressed="false">Office &amp; Interior 办公室内</button>
+        <button type="button" data-f="expo" aria-pressed="false">Exhibitions 展览</button>
+      </div>
+      <div class="gal" id="gal">
+        <figure class="w" data-cat="shop"><button type="button" data-full="assets/img/work/chamomiles-960.webp" aria-label="View larger: Chamomile's Creamery"><img src="assets/img/work/chamomiles-480.webp" alt="Chamomile's Creamery — 发光立体店面招牌 · Illuminated 3D shopfront" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Chamomile's Creamery</b><span>发光立体店面招牌 · Illuminated 3D shopfront</span></figcaption></figure>
+        <figure class="w" data-cat="pillar"><button type="button" data-full="assets/img/work/kowloon-dimsum-960.webp" aria-label="View larger: Kowloon HK Dim Sum 九龙香港点心"><img src="assets/img/work/kowloon-dimsum-480.webp" alt="Kowloon HK Dim Sum 九龙香港点心 — 悬挂灯箱 · Hanging lightbox" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Kowloon HK Dim Sum 九龙香港点心</b><span>悬挂灯箱 · Hanging lightbox</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/youtiao-fish-soup-960.webp" aria-label="View larger: Youtiao Porridge · Fish Soup"><img src="assets/img/work/youtiao-fish-soup-480.webp" alt="Youtiao Porridge · Fish Soup — 菜单灯箱 · Menu lightboxes" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Youtiao Porridge · Fish Soup</b><span>菜单灯箱 · Menu lightboxes</span></figcaption></figure>
+        <figure class="w" data-cat="shop"><button type="button" data-full="assets/img/work/old-airport-wanton-960.webp" aria-label="View larger: Old Airport Rd Wanton Noodle"><img src="assets/img/work/old-airport-wanton-480.webp" alt="Old Airport Rd Wanton Noodle — 招牌与菜单灯箱 · Signboard & menu" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Old Airport Rd Wanton Noodle</b><span>招牌与菜单灯箱 · Signboard & menu</span></figcaption></figure>
+        <figure class="w" data-cat="expo"><button type="button" data-full="assets/img/work/expo-booth-1-960.webp" aria-label="View larger: Exhibition booth"><img src="assets/img/work/expo-booth-1-480.webp" alt="Exhibition booth — 展位搭建与印刷 · Build & graphics" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Exhibition booth</b><span>展位搭建与印刷 · Build & graphics</span></figcaption></figure>
+        <figure class="w" data-cat="office"><button type="button" data-full="assets/img/work/emerald-travels-960.webp" aria-label="View larger: Emerald Travels"><img src="assets/img/work/emerald-travels-480.webp" alt="Emerald Travels — 办公室墙面 · Office wall graphics" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Emerald Travels</b><span>办公室墙面 · Office wall graphics</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/tian-tian-960.webp" aria-label="View larger: Tian Tian Jian Mian 天天见面"><img src="assets/img/work/tian-tian-480.webp" alt="Tian Tian Jian Mian 天天见面 — 招牌与立柱灯箱 · Signboard & pillar" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Tian Tian Jian Mian 天天见面</b><span>招牌与立柱灯箱 · Signboard & pillar</span></figcaption></figure>
+        <figure class="w" data-cat="shop"><button type="button" data-full="assets/img/work/auntie-say-960.webp" aria-label="View larger: Auntie Say"><img src="assets/img/work/auntie-say-480.webp" alt="Auntie Say — LED招牌 · LED signboard" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Auntie Say</b><span>LED招牌 · LED signboard</span></figcaption></figure>
+        <figure class="w" data-cat="pillar"><button type="button" data-full="assets/img/work/ngoh-hiong-960.webp" aria-label="View larger: Ngoh Hiong 五香虾饼"><img src="assets/img/work/ngoh-hiong-480.webp" alt="Ngoh Hiong 五香虾饼 — 立柱与悬挂招牌 · Pillar & hanging signs" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Ngoh Hiong 五香虾饼</b><span>立柱与悬挂招牌 · Pillar & hanging signs</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/yi-cheng-ji-960.webp" aria-label="View larger: Yi Cheng Ji 义成记"><img src="assets/img/work/yi-cheng-ji-480.webp" alt="Yi Cheng Ji 义成记 — 菜单板 · Menu boards" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Yi Cheng Ji 义成记</b><span>菜单板 · Menu boards</span></figcaption></figure>
+        <figure class="w" data-cat="office"><button type="button" data-full="assets/img/work/self-service-lobby-960.webp" aria-label="View larger: Self-service lobby"><img src="assets/img/work/self-service-lobby-480.webp" alt="Self-service lobby — 立体墙字 · 3D wall lettering" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Self-service lobby</b><span>立体墙字 · 3D wall lettering</span></figcaption></figure>
+        <figure class="w" data-cat="shop"><button type="button" data-full="assets/img/work/wan-gui-960.webp" aria-label="View larger: Wan Gui Beverages 萬貴飲料"><img src="assets/img/work/wan-gui-480.webp" alt="Wan Gui Beverages 萬貴飲料 — 灯箱招牌 · Lightbox signboard" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Wan Gui Beverages 萬貴飲料</b><span>灯箱招牌 · Lightbox signboard</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/teochew-braised-960.webp" aria-label="View larger: 63 Teochew Braised 潮州卤汁"><img src="assets/img/work/teochew-braised-480.webp" alt="63 Teochew Braised 潮州卤汁 — 灯箱安装 · Lightbox install" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>63 Teochew Braised 潮州卤汁</b><span>灯箱安装 · Lightbox install</span></figcaption></figure>
+        <figure class="w" data-cat="shop"><button type="button" data-full="assets/img/work/old-airport-wtm-960.webp" aria-label="View larger: Old Airport Rd WTM"><img src="assets/img/work/old-airport-wtm-480.webp" alt="Old Airport Rd WTM — LED字与标志 · LED letters & logo" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Old Airport Rd WTM</b><span>LED字与标志 · LED letters & logo</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/tanjong-rhu-wanton-960.webp" aria-label="View larger: Tanjong Rhu Wanton 丹戎禺云吞面"><img src="assets/img/work/tanjong-rhu-wanton-480.webp" alt="Tanjong Rhu Wanton 丹戎禺云吞面 — 招牌与菜单 · Signboard & menu" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Tanjong Rhu Wanton 丹戎禺云吞面</b><span>招牌与菜单 · Signboard & menu</span></figcaption></figure>
+        <figure class="w" data-cat="expo"><button type="button" data-full="assets/img/work/expo-booth-2-960.webp" aria-label="View larger: Exhibition booth"><img src="assets/img/work/expo-booth-2-480.webp" alt="Exhibition booth — LED与灯箱墙 · LED & lightbox walls" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Exhibition booth</b><span>LED与灯箱墙 · LED & lightbox walls</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/chicken-pot-960.webp" aria-label="View larger: 8889 Chicken Pot"><img src="assets/img/work/chicken-pot-480.webp" alt="8889 Chicken Pot — 招牌与菜单 · Signboard & menu panels" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>8889 Chicken Pot</b><span>招牌与菜单 · Signboard & menu panels</span></figcaption></figure>
+        <figure class="w" data-cat="shop"><button type="button" data-full="assets/img/work/gold-letters-960.webp" aria-label="View larger: Gold 3D lettering"><img src="assets/img/work/gold-letters-480.webp" alt="Gold 3D lettering — 金色立体字 · Acrylic letters" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Gold 3D lettering</b><span>金色立体字 · Acrylic letters</span></figcaption></figure>
+        <figure class="w" data-cat="pillar"><button type="button" data-full="assets/img/work/pillar-lightbox-960.webp" aria-label="View larger: Pillar lightbox"><img src="assets/img/work/pillar-lightbox-480.webp" alt="Pillar lightbox — 立柱灯箱 · Wrap-around lightbox" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Pillar lightbox</b><span>立柱灯箱 · Wrap-around lightbox</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/ringos-960.webp" aria-label="View larger: Ringo's Fried Chicken"><img src="assets/img/work/ringos-480.webp" alt="Ringo's Fried Chicken — 全幅灯箱 · Full-width lightbox" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Ringo's Fried Chicken</b><span>全幅灯箱 · Full-width lightbox</span></figcaption></figure>
+        <figure class="w" data-cat="office"><button type="button" data-full="assets/img/work/jj-drinks-wall-960.webp" aria-label="View larger: JJ Drinks"><img src="assets/img/work/jj-drinks-wall-480.webp" alt="JJ Drinks — 墙面品牌 · Wall branding" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>JJ Drinks</b><span>墙面品牌 · Wall branding</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/xin-ma-960.webp" aria-label="View larger: Xin Ma 新马口味"><img src="assets/img/work/xin-ma-480.webp" alt="Xin Ma 新马口味 — 招牌与菜单 · Signboard & menu" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Xin Ma 新马口味</b><span>招牌与菜单 · Signboard & menu</span></figcaption></figure>
+        <figure class="w" data-cat="shop"><button type="button" data-full="assets/img/work/auto-dreamz-960.webp" aria-label="View larger: Auto Dreamz"><img src="assets/img/work/auto-dreamz-480.webp" alt="Auto Dreamz — 夜间安装 · Night install" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Auto Dreamz</b><span>夜间安装 · Night install</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/juice-care-960.webp" aria-label="View larger: Juice Care"><img src="assets/img/work/juice-care-480.webp" alt="Juice Care — 灯箱招牌 · Lightbox signboard" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Juice Care</b><span>灯箱招牌 · Lightbox signboard</span></figcaption></figure>
+        <figure class="w" data-cat="expo"><button type="button" data-full="assets/img/work/nippon-standees-960.webp" aria-label="View larger: Display standees"><img src="assets/img/work/nippon-standees-480.webp" alt="Display standees — 展示立牌 · Retail standees" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Display standees</b><span>展示立牌 · Retail standees</span></figcaption></figure>
+        <figure class="w" data-cat="pillar"><button type="button" data-full="assets/img/work/tanjong-rhu-pillar-960.webp" aria-label="View larger: Tanjong Rhu 丹戎禺"><img src="assets/img/work/tanjong-rhu-pillar-480.webp" alt="Tanjong Rhu 丹戎禺 — 直立灯箱 · Vertical lightbox" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Tanjong Rhu 丹戎禺</b><span>直立灯箱 · Vertical lightbox</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/deli-delight-960.webp" aria-label="View larger: Deli Delight"><img src="assets/img/work/deli-delight-480.webp" alt="Deli Delight — 菜单灯箱 · Menu lightboxes" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Deli Delight</b><span>菜单灯箱 · Menu lightboxes</span></figcaption></figure>
+        <figure class="w" data-cat="office"><button type="button" data-full="assets/img/work/frosted-film-960.webp" aria-label="View larger: Office glass"><img src="assets/img/work/frosted-film-480.webp" alt="Office glass — 磨砂玻璃贴 · Frosted film" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Office glass</b><span>磨砂玻璃贴 · Frosted film</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/seng-kee-960.webp" aria-label="View larger: Seng Kee"><img src="assets/img/work/seng-kee-480.webp" alt="Seng Kee — 灯箱招牌 · Lightbox signboard" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Seng Kee</b><span>灯箱招牌 · Lightbox signboard</span></figcaption></figure>
+        <figure class="w" data-cat="expo"><button type="button" data-full="assets/img/work/expo-booth-3-960.webp" aria-label="View larger: Event booth"><img src="assets/img/work/expo-booth-3-480.webp" alt="Event booth — 印刷展板 · Printed panels" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Event booth</b><span>印刷展板 · Printed panels</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/man-na-960.webp" aria-label="View larger: Man-Na 满"><img src="assets/img/work/man-na-480.webp" alt="Man-Na 满 — 菜单灯箱 · Menu lightbox" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Man-Na 满</b><span>菜单灯箱 · Menu lightbox</span></figcaption></figure>
+        <figure class="w" data-cat="office"><button type="button" data-full="assets/img/work/gallery-wall-960.webp" aria-label="View larger: Gallery wall"><img src="assets/img/work/gallery-wall-480.webp" alt="Gallery wall — 墙面刻字 · Vinyl lettering" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Gallery wall</b><span>墙面刻字 · Vinyl lettering</span></figcaption></figure>
+        <figure class="w" data-cat="pillar"><button type="button" data-full="assets/img/work/wanton-pillar-960.webp" aria-label="View larger: Pillar wrap"><img src="assets/img/work/wanton-pillar-480.webp" alt="Pillar wrap — 立柱灯箱 · Pillar lightbox" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Pillar wrap</b><span>立柱灯箱 · Pillar lightbox</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/zi-char-menu-960.webp" aria-label="View larger: Hawker stall"><img src="assets/img/work/zi-char-menu-480.webp" alt="Hawker stall — 菜单灯箱 · Menu lightboxes" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Hawker stall</b><span>菜单灯箱 · Menu lightboxes</span></figcaption></figure>
+        <figure class="w" data-cat="office"><button type="button" data-full="assets/img/work/lobby-wide-960.webp" aria-label="View larger: Clinic lobby"><img src="assets/img/work/lobby-wide-480.webp" alt="Clinic lobby — 大堂标识 · Lobby signage" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Clinic lobby</b><span>大堂标识 · Lobby signage</span></figcaption></figure>
+        <figure class="w" data-cat="light"><button type="button" data-full="assets/img/work/lau-pa-sat-960.webp" aria-label="View larger: Lau Pa Sat stall 老巴刹"><img src="assets/img/work/lau-pa-sat-480.webp" alt="Lau Pa Sat stall 老巴刹 — 档口招牌 · Stall frontage" width="480" height="640" loading="lazy" decoding="async"></button><figcaption><b>Lau Pa Sat stall 老巴刹</b><span>档口招牌 · Stall frontage</span></figcaption></figure>
+      </div>
+      <div class="more"><button class="btn ghost" id="moreBtn" type="button">Show more 更多作品</button></div>
+    </div>
+  </section>
+
+  <section class="wrap sec" style="padding-top:0">
+    <div class="head"><h2>Why City Print<span class="zh" lang="zh-Hans">为什么选择我们</span></h2></div>
+    <div class="why">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.2L17 22l-5-3-5 3 1.5-8.8"/></svg><b>Quality Materials</b><span>Durable &amp; long-lasting · 优质耐用材料</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 17l2 2a1 1 0 1 0 3-3"/><path d="M14 14l2.5 2.5a1 1 0 1 0 3-3l-3.9-3.9a3 3 0 0 0-4.2 0l-.9.9a1 1 0 1 1-3-3l2.8-2.8a5.8 5.8 0 0 1 7.1-.9l.5.3a4.2 4.2 0 0 0 3.1.5L21 4"/><path d="M21 3l1 11h-2M3 3L2 14l6.5 6.5a1 1 0 1 0 3-3M3 4h8"/></svg><b>Professional Installation</b><span>Experienced team · 专业安装团队</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg><b>Custom Designs</b><span>Tailored to your brand · 量身定制设计</span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg><b>Trusted by Businesses</b><span>F&amp;B · Retail · Offices · More</span></div>
+    </div>
+  </section>
+
+  <section class="wrap sec" style="padding-top:0">
+    <div class="head"><h2>How It Works<span class="zh" lang="zh-Hans">合作流程</span></h2></div>
+    <ol class="steps">
+      <li><b>WhatsApp us 联系我们</b><span>Send a photo of your shopfront or wall, rough size and what you need.</span></li>
+      <li><b>Design &amp; quote 设计报价</b><span>We propose a design and give you a clear quotation.</span></li>
+      <li><b>Fabricate 制作</b><span>Your sign is printed and built with quality materials.</span></li>
+      <li><b>Install 安装</b><span>Our team installs it on-site, anywhere in Singapore.</span></li>
+    </ol>
+  </section>
+
+  <section class="wrap sec faq" id="faq" style="padding-top:0">
+    <div>
+      <h2>Frequently Asked Questions<span class="zh" lang="zh-Hans">常见问题</span></h2>
+      <p class="note">Another question? <a href="https://wa.me/6589302515" target="_blank" rel="noopener">WhatsApp us</a> — we reply in English or 中文.</p>
+    </div>
+    <div>
+      <details open><summary><span>How do I get a quotation?<small lang="zh-Hans">如何获取报价？</small></span></summary><p>WhatsApp us a photo of the location, the approximate size and what you have in mind (or fill in the form below). We'll reply with ideas and a quotation. 发送现场照片、大概尺寸和需求，我们会尽快回复设计建议与报价。</p></details>
+      <details><summary><span>Do you install islandwide?<small lang="zh-Hans">全岛都可以安装吗？</small></span></summary><p>Yes — our installation team covers all of Singapore, including hawker centres, food courts, malls, shophouses and offices. 是的，我们提供全岛安装服务。</p></details>
+      <details><summary><span>I don't have a design or logo. Can you help?<small lang="zh-Hans">没有设计稿可以吗？</small></span></summary><p>Of course. We design custom signage and menu boards from scratch, including bilingual English/Chinese layouts. 当然可以，我们提供中英文双语设计。</p></details>
+      <details><summary><span>Do you repair or maintain existing signs?<small lang="zh-Hans">可以维修旧招牌吗？</small></span></summary><p>Yes — we provide maintenance for signboards and lightboxes. Send us a photo of the problem and we'll advise. 可以，请发送照片给我们评估。</p></details>
+      <details><summary><span>How long does a project take?<small lang="zh-Hans">制作需要多久？</small></span></summary><p>It depends on size and materials. We confirm the timeline together with your quotation — tell us if you have an opening date to meet. 视尺寸和材料而定，报价时会确认交期。</p></details>
+    </div>
+  </section>
+
+  <section class="wrap" id="enquire">
+    <div class="cta">
+      <div>
+        <h2>Let's put your brand on display.<span class="zh" lang="zh-Hans">让您的品牌闪耀登场</span></h2>
+        <p>Tell us about your project and we'll get back to you on WhatsApp. 填写表格，我们将通过 WhatsApp 回复您。</p>
+        <div class="direct">
+          <a href="https://wa.me/6589302515" target="_blank" rel="noopener">WhatsApp +65 8930 2515</a>
+          <a href="tel:+6589302515" style="font-size:1rem;color:#d9cffc">Call 致电 +65 8930 2515</a>
+        </div>
+      </div>
+      <form id="enq" novalidate>
+        <label>Name 姓名<input name="name" required autocomplete="name" placeholder="Your name"></label>
+        <label>Business 公司/店名<input name="biz" autocomplete="organization" placeholder="Shop / company"></label>
+        <label>Service 服务
+          <select name="svc">
+            <option>Signboard 招牌</option>
+            <option>Lightbox / Menu board 灯箱/菜单板</option>
+            <option>Large format printing 大型印刷</option>
+            <option>Wall graphics / Frosted film 墙贴/磨砂贴</option>
+            <option>Exhibition / Event 展览活动</option>
+            <option>Repair / Maintenance 维修保养</option>
+            <option>Others 其他</option>
+          </select>
+        </label>
+        <label>Location 地点<input name="loc" placeholder="e.g. Tampines hawker centre"></label>
+        <label class="full">Details 详情<textarea name="msg" rows="3" placeholder="Size, quantity, deadline… 尺寸、数量、日期…"></textarea></label>
+        <button class="btn wa" type="submit"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.2 10 10 5.3 16 5.3S26.8 10 26.8 15.8 22 26.4 16 26.4zm5.9-7.8c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.2 1.3 3.4c.2.2 2.3 3.5 5.6 4.9 2.8 1.1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg> Send via WhatsApp 发送</button>
+        <p class="fine">Opens WhatsApp with your message ready to send. You can attach photos there.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> City Print &amp; Signs Pte Ltd · Singapore</span>
+    <span><a href="https://wa.me/6589302515" target="_blank" rel="noopener">WhatsApp 8930 2515</a></span>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/6589302515?text=Hi%20City%20Print%2C%20I%27d%20like%20to%20enquire." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.2 10 10 5.3 16 5.3S26.8 10 26.8 15.8 22 26.4 16 26.4zm5.9-7.8c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.2 1.3 3.4c.2.2 2.3 3.5 5.6 4.9 2.8 1.1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg><span>Chat with us</span></a>
+
+<dialog id="dlg"><button type="button" aria-label="Close" id="dlgX">×</button><img id="dlgImg" alt=""><p id="dlgCap"></p></dialog>
+
+<script>
+(function(){
+var d=document,WA='6589302515';
+d.getElementById('y').textContent=new Date().getFullYear();
+// menu
+var mb=d.getElementById('menuBtn'),ln=d.getElementById('links');
+mb.onclick=function(){var o=ln.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+ln.onclick=function(e){if(e.target.closest('a')){ln.classList.remove('open');mb.setAttribute('aria-expanded',false)}};
+// carousel
+var car=d.getElementById('car');
+d.querySelectorAll('.arrows button').forEach(function(b){b.onclick=function(){car.scrollBy({left:b.dataset.dir*car.firstElementChild.offsetWidth*1.03,behavior:'smooth'})}});
+// gallery filter + show more
+var items=[].slice.call(d.querySelectorAll('#gal .w')),fb=d.querySelectorAll('.filters button'),more=d.getElementById('moreBtn'),cur='all',lim=12;
+function render(){var n=0;items.forEach(function(it){var ok=cur==='all'||it.dataset.cat===cur;it.hidden=!ok||(cur==='all'&&++n>lim)});more.hidden=!(cur==='all'&&items.length>lim)}
+fb.forEach(function(b){b.onclick=function(){fb.forEach(function(x){x.setAttribute('aria-pressed',x===b)});cur=b.dataset.f;render()}});
+more.onclick=function(){lim=items.length;render()};
+render();
+// lightbox
+var dlg=d.getElementById('dlg'),di=d.getElementById('dlgImg'),dc=d.getElementById('dlgCap');
+d.getElementById('gal').onclick=function(e){var b=e.target.closest('button[data-full]');if(!b)return;var im=b.querySelector('img');di.src=b.dataset.full;di.alt=im.alt;dc.textContent=im.alt;if(dlg.showModal)dlg.showModal();else window.open(b.dataset.full)};
+d.getElementById('dlgX').onclick=function(){dlg.close()};
+dlg.onclick=function(e){if(e.target===dlg)dlg.close()};
+// enquiry -> WhatsApp
+d.getElementById('enq').onsubmit=function(e){
+  e.preventDefault();var f=e.target;
+  if(!f.name.value.trim()){f.name.focus();f.name.placeholder='Please enter your name 请输入姓名';return}
+  var t='Hi City Print, I would like a quote.\n\nName 姓名: '+f.name.value.trim();
+  if(f.biz.value.trim())t+='\nBusiness 店名: '+f.biz.value.trim();
+  t+='\nService 服务: '+f.svc.value;
+  if(f.loc.value.trim())t+='\nLocation 地点: '+f.loc.value.trim();
+  if(f.msg.value.trim())t+='\nDetails 详情: '+f.msg.value.trim();
+  var u='https://wa.me/'+WA+'?text='+encodeURIComponent(t);
+  if(!window.open(u,'_blank'))location.href=u;
+};
+})();
+</script>
 </body>
 </html>

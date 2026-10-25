@@ -1,19 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-SG">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page not found — CityPrint</title>
-  <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: system-ui, sans-serif; text-align: center; color: #0f172a; }
-    a { color: #1d4ed8; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — City Print &amp; Signs</title>
+<meta name="robots" content="noindex">
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;text-align:center;padding:24px;font-family:"Segoe UI",system-ui,-apple-system,Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:radial-gradient(120% 120% at 0 0,#5b21b6,#2e1065 45%,#1a0638);color:#fff}
+h1{font-size:clamp(3rem,12vw,6rem);margin:0}
+p{color:#d9cffc}
+a{display:inline-block;margin-top:12px;padding:13px 22px;border-radius:999px;background:#fff;color:#2e1065;font-weight:700;text-decoration:none}
+</style>
 </head>
 <body>
-  <div>
-    <h1>404 — Page not found</h1>
-    <!-- Change to "/" once a custom domain is set up -->
-    <p><a href="/cityprint/">Back to CityPrint home</a></p>
-  </div>
+<div>
+  <h1>404</h1>
+  <p>Sorry, this page doesn't exist. 页面不存在。</p>
+  <a id="home" href="/">Back to City Print 返回首页</a>
+</div>
+<script>
+// Works both on the GitHub preview URL (/cityprint/) and on cityprint.sg (/)
+if(location.pathname.indexOf('/cityprint/')===0)document.getElementById('home').href='/cityprint/';
+</script>
 </body>
 </html>
