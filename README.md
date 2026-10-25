@@ -2,8 +2,7 @@
 
 Website for City Print & Signs Pte Ltd (Singapore). A single, fast page made of plain HTML, with no framework and no build step.
 
-- Preview: https://workarounds81.github.io/cityprint/
-- Live (once DNS is pointed): https://cityprint.sg/
+- Live: https://cityprint.sg/ (DNS at Qoxy → GitHub Pages)
 
 ## Files
 
