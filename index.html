@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CityPrint — Fast, Local Printing</title>
+  <meta name="description" content="CityPrint: business cards, flyers, banners, signage and custom printing with fast local turnaround.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top"><img src="assets/favicon.svg" alt="" width="28" height="28"> CityPrint</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">☰</button>
+      <nav id="nav-links" class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#contact" class="btn btn-small">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <h1>Print that makes your business look sharp.</h1>
+        <p class="lead">Business cards, flyers, banners and signage — printed locally, ready fast.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Request a quote</a>
+          <a href="#services" class="btn btn-ghost">See services</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="grid">
+          <article class="card"><h3>Business cards</h3><p>Matte, gloss or premium textured stock. Same-day options available.</p></article>
+          <article class="card"><h3>Flyers &amp; brochures</h3><p>Full-colour, single or double-sided, folded to your spec.</p></article>
+          <article class="card"><h3>Banners &amp; signage</h3><p>Vinyl banners, roll-ups, posters and window graphics.</p></article>
+          <article class="card"><h3>Stickers &amp; labels</h3><p>Custom shapes and sizes for packaging and promotion.</p></article>
+          <article class="card"><h3>Large format</h3><p>Posters, plans and display prints up to A0 and beyond.</p></article>
+          <article class="card"><h3>Design help</h3><p>No artwork? Our team can design or fix files for print.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section alt">
+      <div class="container">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li><strong>Send your file</strong><span>Upload artwork or tell us what you need.</span></li>
+          <li><strong>Approve a proof</strong><span>We check your file and send a proof and price.</span></li>
+          <li><strong>Collect or deliver</strong><span>Pick up in store or get it delivered.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div>
+          <h2>Get a quote</h2>
+          <p>Tell us about your job and we'll reply within one business day.</p>
+          <!-- TODO: replace with real business details -->
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+10000000000">+1 (000) 000-0000</a></li>
+            <li><strong>Address:</strong> 123 Main Street, Your City</li>
+            <li><strong>Hours:</strong> Mon–Fri 9:00–18:00, Sat 10:00–14:00</li>
+          </ul>
+        </div>
+        <!-- Static sites can't process forms on their own. Point "action" at a form service
+             (e.g. Formspree) or swap for your host's form handling. Until then it opens an email. -->
+        <form class="quote-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+          <label>Name<input name="name" required autocomplete="name"></label>
+          <label>Email<input name="email" type="email" required autocomplete="email"></label>
+          <label>What do you need printed?
+            <select name="product">
+              <option>Business cards</option><option>Flyers / brochures</option>
+              <option>Banners / signage</option><option>Stickers / labels</option>
+              <option>Large format</option><option>Something else</option>
+            </select>
+          </label>
+          <label>Details (quantity, size, deadline)<textarea name="details" rows="4"></textarea></label>
+          <button class="btn" type="submit">Send request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> CityPrint. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
