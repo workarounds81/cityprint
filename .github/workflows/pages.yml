@@ -21,7 +21,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       # Publish only what the site needs; the original photos in assets/Cityprint stay out.
       - name: Collect site files
         run: |
@@ -29,7 +29,7 @@ jobs:
           cp index.html 404.html robots.txt sitemap.xml CNAME site.webmanifest _site/
           mkdir -p _site/assets && cp -r assets/img assets/fonts _site/assets/
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
       - id: deployment
